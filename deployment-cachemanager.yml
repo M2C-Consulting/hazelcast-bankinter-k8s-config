@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cachemanager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cachemanager
+  template:
+    metadata:
+      labels:
+        app: cachemanager
+    spec:
+       containers:
+       - name: yenght
+         image: yenght/cachemanager
